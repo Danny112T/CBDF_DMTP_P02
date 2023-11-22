@@ -25,7 +25,7 @@ exports.login = async (req, res) => {
           if (passwordCorrect) {
             res
               .status(200)
-              .json({ estado: 1, mensaje: "Login Successful",datosUsuario: usuario, token: token });
+              .json({ estado: 1, mensaje: "Login Successful", token: token });
           } else {
             res.status(401).json({ estado: 0, mensaje: "Unauthorized" });
           }
